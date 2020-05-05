@@ -1,2 +1,3 @@
 folium lets you create Map objects that convert python code to html and js
 in folium everything revolves around the map object
+folium converts python code to html css and js
