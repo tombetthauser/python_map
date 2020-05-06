@@ -1,3 +1,5 @@
 folium lets you create Map objects that convert python code to html and js
 in folium everything revolves around the map object
 folium converts python code to html css and js
+[master f9c05af] Add folium map object to test folium file
+ 1 file changed, 1 insertion(+)
