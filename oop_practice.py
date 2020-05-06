@@ -1,10 +1,20 @@
 class Artist:
+  # class attribute
+  all_artists = []
+
   def __init__(self, name, mfa, bfa, birthyear, birthplace):
     self.birthplace = birthplace
     self.birthyear = birthyear
     self.name = name
     self.bfa = bfa
     self.mfa = mfa
+    if self not in Artist.all_artists:
+      Artist.all_artists.append(self)
+
+  # class method - duh
+  @classmethod
+  def count(cls):
+    return len(Artist.all_artists)
 
   def info(self):
     birthplace = self.birthplace
@@ -25,6 +35,9 @@ class ArtWork:
     return f'"{self.title}" by {self.artist}, {self.year}'
 
 class Painting(ArtWork):
+  # class attribute - constant
+  TYPE = 'Painting'
+
   def __init__(self, title, artist, height, width, medium, year):
     super().__init__(title, artist, year)
     self.medium = medium
@@ -38,10 +51,10 @@ class Painting(ArtWork):
     title = self.title
     year = self.year
 
-    if (type(self.artist) == type(Artist(0, 0, 0, 0, 0))):
-      artist = self.artist.name 
-    else: 
+    if (type(self.artist) == type('string')):
       artist = self.artist
+    else: 
+      artist = self.artist.name 
     
     return f'"{title}" by {artist}, {height} x {width}, {medium}, {year}'
 
@@ -75,3 +88,7 @@ painting2 = Painting(
 print(painting1.info())
 print(artist1.info())
 print(painting2.info())
+for ele in Artist.all_artists:
+  print(ele.name)
+print(painting1.TYPE)
+print(Artist.count())
