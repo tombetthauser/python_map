@@ -1,7 +1,10 @@
 class JobSeeker:
-  def hello(self, name='nobody'):
-    print ("Hello, %s!" % name)
+  def __init__(self, name):
+    self.name = name
 
-js = JobSeeker()
+  def hello(self, name='nobody'):
+    print ("Hello, %s! My name is %s." % (name, self.name))
+
+js = JobSeeker("Garon")
 js.hello()
 js.hello('Tom')
