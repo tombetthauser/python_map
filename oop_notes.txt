@@ -1,0 +1,5 @@
+everything in python is a class instance
+
+for instance run type(cat) or type(5) and see thattheir both actually instances of the string and int classes
+the legal functions we can string off these are referred to as methods just like in ruby
+we can create our own class very easily by running class Dog: def bark(self): print("Im a Dog... Bark.")
