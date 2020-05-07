@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f89299d9a73843c9a6f43fcc312f090b {
+                #map_12cbd00cc81d45be83ab82a1ff442590 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_f89299d9a73843c9a6f43fcc312f090b" ></div>
+            <div class="folium-map" id="map_12cbd00cc81d45be83ab82a1ff442590" ></div>
         
 </body>
 <script>    
     
-            var map_f89299d9a73843c9a6f43fcc312f090b = L.map(
-                "map_f89299d9a73843c9a6f43fcc312f090b",
+            var map_12cbd00cc81d45be83ab82a1ff442590 = L.map(
+                "map_12cbd00cc81d45be83ab82a1ff442590",
                 {
                     center: [38.58, -99.09],
                     crs: L.CRS.EPSG3857,
@@ -55,9 +55,34 @@
 
         
     
-            var tile_layer_965c42a338ec45dc80e064940bd824f7 = L.tileLayer(
+            var tile_layer_2dc4fe9daffb43949f8132a6e6cc6440 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_f89299d9a73843c9a6f43fcc312f090b);
+            ).addTo(map_12cbd00cc81d45be83ab82a1ff442590);
         
+    
+            var marker_525dcb2691284fd58a648fd7615a8dd1 = L.marker(
+                [38.58, -99.09],
+                {}
+            ).addTo(map_12cbd00cc81d45be83ab82a1ff442590);
+        
+    
+            var icon_bdb858ba05a04c7eb1a68e7fdcf9cdca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_525dcb2691284fd58a648fd7615a8dd1.setIcon(icon_bdb858ba05a04c7eb1a68e7fdcf9cdca);
+        
+    
+        var popup_2d32a36c927b4f83ae8636ee5410ad2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5eec6ee15644b659808b6f971df26bb = $(`<div id="html_c5eec6ee15644b659808b6f971df26bb" style="width: 100.0%; height: 100.0%;">Tom Betthauser's Studio</div>`)[0];
+            popup_2d32a36c927b4f83ae8636ee5410ad2b.setContent(html_c5eec6ee15644b659808b6f971df26bb);
+        
+
+        marker_525dcb2691284fd58a648fd7615a8dd1.bindPopup(popup_2d32a36c927b4f83ae8636ee5410ad2b)
+        ;
+
+        
+    
 </script>
